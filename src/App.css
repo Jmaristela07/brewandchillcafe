@@ -1,0 +1,19 @@
+/* index.css o App.css */
+
+@keyframes floatAnimation {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInAnimation {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.force-float {
+  animation: floatAnimation 5s ease-in-out infinite !important;
+}
+
+.force-fade-in {
+  animation: fadeInAnimation 2s ease-out forwards !important;
+}

@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes diagonal-falling {
+  0% {
+    /* Simula sa taas-kaliwa */
+    background-position: 0px 0px;
+  }
+  100% {
+    /* Mabilis na diagonal drift pababa-pakanan */
+    background-position: 80px 80px;
+  }
+}
+
+.coffee-animated-bg {
+  /* Creamy Coffee Latte Solid Background Base */
+  background-color: #e6d5c3; 
+  
+  /* 
+    Minimalist Coffee Mug with Steam SVG Pattern
+    Dark brown (#3f2818) na mugs na may 8% opacity para magaan lang sa mata
+  */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='%233f2818' fill-opacity='0.08'%3E%3C!-- Mugs --%3E%3Cpath d='M12 18h12v10c0 3.3-2.7 6-6 6h-0c-3.3 0-6-2.7-6-6V18zm12 3h2c1.7 0 3 1.3 3 3s-1.3 3-3 3h-2v-6zM42 38h12v10c0 3.3-2.7 6-6 6h-0c-3.3 0-6-2.7-6-6V38zm12 3h2c1.7 0 3 1.3 3 3s-1.3 3-3 3h-2v-6z'/%3E%3C!-- Steam / Usok --%3E%3Cpath d='M15 10c0 1.5 1 2.5 1 4s-1 2.5-1 4m5-8c0 1.5 1 2.5 1 4s-1 2.5-1 4M45 30c0 1.5 1 2.5 1 4s-1 2.5-1 4m5-8c0 1.5 1 2.5 1 4s-1 2.5-1 4' stroke='%233f2818' stroke-width='1.5' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/g%3E%3C/svg%3E");
+  
+  /* Saktong laki para sa mga cute na mugs */
+  background-size: 130px 130px;
+  
+  /* Dynamic 12-second diagonal slide for that lively falling effect */
+  animation: diagonal-falling 6s linear infinite;
+}
+
+@layer utilities {
+  .bg-container-leaves {
+    /* Magic: Detalyadong drowing ng cute coffee leaves na kulay light emerald */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M10 8c3 0 5 2 5 5s-2 5-5 5-5-2-5-5 2-5 5-5zm0 2c-1.5 0-3 1-3 3s1.5 3 3 3 3-1 3-3-1.5-3-3-3zm20 10c3 0 5 2 5 5s-2 5-5 5-5-2-5-5 2-5 5-5zm0 2c-1.5 0-3 1-3 3s1.5 3 3 3 3-1 3-3-1.5-3-3-3zM5 25c2 0 4 1 4 3s-2 3-4 3-4-1-4-3 2-3 4-3zm20-15c2 0 4 1 4 3s-2 3-4 3-4-1-4-3 2-3 4-3z' fill='%2334d399' fill-opacity='0.08'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+}
